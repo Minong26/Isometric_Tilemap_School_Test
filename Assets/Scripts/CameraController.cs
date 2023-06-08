@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject player;
+    private Transform target;
+    public float smoothness;
+    public float minX, maxX, minY, maxY;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        var position = transform.position;
-        position.x = player.transform.position.x;
-        position.y = player.transform.position.y;
-        transform.position = position;
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
+    void LateUpdate()
+    {
+        float playerX = Mathf.Clamp(target.position.x, minX, maxX);
+        float playerY = Mathf.Clamp(target.position.y, minY, maxY);
+
+        transform.position = Vector3.Lerp(transform.position,
+            new Vector3(playerX, playerY, transform.position.z),
+            smoothness * Time.deltaTime);
     }
 }

@@ -1,0 +1,23 @@
+corner
+L - 1, 3 /(D) 25, 39
+R - 9, 11 /(D) 31, 33
+UP - 13, 15 /(D) 29, 27
+Under - 5, 7 /(D) 37, 35
+
+Plain (Grass)
+17~20 /(D) 
+
+Plain (Sand)
+21~24 /(D) 
+
+corner (inside)
+L - 2 /(D) 40
+R - 10 /(D) 32
+Uper - 14 /(D) 28
+Under - 6 /(D) 36
+
+side
+Uper L - 16 /(D) 26
+Uper R - 12 /(D) 30
+Under L - 04 /(D) 38
+Under R - 08 /(D) 34
