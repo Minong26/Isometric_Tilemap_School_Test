@@ -1,0 +1,13 @@
+Corner
+L - 1
+R - 5
+Uper - 2
+
+Side
+Uper L - 3
+Uper R - 4
+
+Floor - 10 ~ 14(14 가장 많이)
+Side Uper L - 7
+Side Uper R - 6
+Tile - 16, 15(문양), 17(카펫?)

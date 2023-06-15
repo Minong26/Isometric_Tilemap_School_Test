@@ -1,0 +1,21 @@
+Sides
+Uper L - 56
+Uper R - 52
+Under L - 44
+Under R - 48
+
+Corner
+L - 41
+R - 51	
+Uper - 53
+Under -45
+
+(Flat)
+L - 43
+R - 49
+Uper - 55
+Under - 47
+
+Plain - 42(왼쪽 회색), 46(가운데 밝음), 50(우측 회색), 54, 57, 58, 59, 60, 61, 62, 
+
+Slide - 71(R), 72(L)
