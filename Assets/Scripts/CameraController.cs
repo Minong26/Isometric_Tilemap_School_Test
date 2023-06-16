@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class CameraController : MonoBehaviour
 {
@@ -11,6 +13,19 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
+    }
+    private void Update()
+    {
+        float targetX = target.position.x;
+        float targetY = target.position.y;
+        float camX = transform.position.x;
+        float camY = transform.position.y;
+        float distance = Mathf.Sqrt(Mathf.Pow((targetX - camX), 2) + Mathf.Pow((targetY - camY), 2));
+        if (distance >= 5f)
+        {
+            transform.position = new Vector3(targetX, targetY, transform.position.z);
+        }
     }
 
     void LateUpdate()
