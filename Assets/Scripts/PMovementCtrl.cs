@@ -19,10 +19,29 @@ public class PMovementCtrl : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            moveSpeed *= 1.5f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            moveSpeed = 2f;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftControl)) 
+        {
+            moveSpeed *= 0.7f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            moveSpeed = 2f;
+        }
+
     }
 
     private void FixedUpdate()
     {
+        
+
         Vector2 currentPos = rb.position;
         Vector2 inputVector = new Vector2(moveX, moveY).normalized * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(currentPos + inputVector);
