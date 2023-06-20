@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
-using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
+    using UnityEngine;
+    using static UnityEngine.GraphicsBuffer;
 
 public class CameraController : MonoBehaviour
 {
@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
         float camX = transform.position.x;
         float camY = transform.position.y;
         float distance = Mathf.Sqrt(Mathf.Pow((targetX - camX), 2) + Mathf.Pow((targetY - camY), 2));
-        if (distance >= 5f)
+        if (distance >= 5f)     //카메라와 플레이어의 거리가 5 이상일 때 텔포
         {
             transform.position = new Vector3(targetX, targetY, transform.position.z);
         }
